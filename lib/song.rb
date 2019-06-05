@@ -31,7 +31,7 @@ class Song
   
   def self.find_by_name(name)
     @@all.each do |song|
-      song.detect {song.name == name}
+      song.detect {|song| song.name == name}
         return song
       end 
     end
